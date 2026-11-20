@@ -1,0 +1,171 @@
+{
+  "format": "dibutinkuy-catalog/1",
+  "tools": {
+    "dibu-poly": {
+      "name": "Dibu Poly",
+      "channels": {
+        "stable": {
+          "version": "0.4.2",
+          "api": 1,
+          "file": "packages/dibu-poly-0.4.2.dtp",
+          "sha256": "5beaaee3912a61e578a18b2805b76445684d0c375ea30b75e8a941edfc31c0ea",
+          "size": 3587190,
+          "url": "https://raw.githubusercontent.com/Stiztz/dibutinkuy-releases/tools/packages/dibu-poly-0.4.2.dtp",
+          "notes": [
+            {
+              "v": "0.4.2",
+              "items": [
+                "New HLTV section for CS2, in electric blue: the match's HLTV page inside the scoreboard",
+                "It finds the match in HLTV's list by tournament, team and start time; if it is not sure, the list stays for you to pick",
+                "Find again, the match list and open in your browser, one click each"
+              ]
+            },
+            {
+              "v": "0.4.1",
+              "items": [
+                "New REAL-TIME section: the score with both teams, every map of the series with its result, and a bold BO tag",
+                "The market as a probability bar with the spread, where the price was 5 minutes ago and a 10-minute price line",
+                "Says when Polymarket's own score falls behind the real one",
+                "Dota 2 and LoL: games and kills instead of maps and rounds",
+                "VETO section in rose, so it no longer blends with STREAM"
+              ]
+            },
+            {
+              "v": "0.4.0",
+              "items": [
+                "Its own tool now: it updates from the Library without DibuTinkuy restarting",
+                "An update closes its windows for a moment and brings them back with the same match",
+                "Restart Dibu Poly from the Library, also without restarting DibuTinkuy"
+              ]
+            },
+            {
+              "v": "0.3.1",
+              "items": [
+                "Dota 2: a dead hero greys out, with a rough respawn countdown",
+                "Dota 2: a respawn flashes green, a buyback flashes gold, and BB tags count buybacks",
+                "Dota 2: hero names as players know them (Doom, Timbersaw…) and a HERO column"
+              ]
+            },
+            {
+              "v": "0.3.0",
+              "items": [
+                "Now a tool of the DibuTinkuy launcher: opened from the Library",
+                "Updates are handled by the launcher"
+              ]
+            },
+            {
+              "v": "0.2.0",
+              "items": [
+                "Veto section with map cards and side picks",
+                "Live log with Rounds and Text tabs",
+                "Rows layout, up to three sections per row",
+                "Esports on Polymarket list in the main window"
+              ]
+            }
+          ],
+          "published": "2026-11-16T17:40:04.899Z"
+        },
+        "beta": {
+          "version": "0.4.3-beta.12",
+          "api": 1,
+          "file": "packages/dibu-poly-0.4.3-beta.12.dtp",
+          "sha256": "a8e3289bca9ed046f988f575bc59d66bf1c099968e72ee9938a4cd65940933e5",
+          "size": 3646464,
+          "url": "https://raw.githubusercontent.com/Stiztz/dibutinkuy-releases/tools/packages/dibu-poly-0.4.3-beta.12.dtp",
+          "notes": [
+            {
+              "v": "0.4.3",
+              "items": [
+                "BetBoom inside Dibu Poly: one list with every Polymarket match and every live BetBoom match, marked PM, BB and GRID",
+                "Real time from Polymarket or BetBoom: Auto, Polymarket first or BetBoom first, and a click on a row's PM or BB opens that one",
+                "With BetBoom: its live score and its match and map winner odds, with a SUSPENDED mark when it stops taking bets",
+                "GRID through BetBoom's own proxy: delayed score, veto and live log as with Polymarket",
+                "The stream from BetBoom's Twitch broadcast when it has one",
+                "Sounds for every match, whatever the source: round start and end, map end, kills (bright for the left team, low for the right) and the bomb, each with its switch",
+                "When BetBoom asks for a check, its window opens for you to do it",
+                "Other tools on this PC can read the open match (score, GRID game state and veto)",
+                "For tools reading the open match: a round is live when its freezetime ends, not when GRID opens it at the start of the buy time; a timeout holds only until it ends",
+                "For tools reading the open match: GRID counts as alive while any of its feeds speaks, so a quiet bomb no longer reads as a lost feed",
+                "For tools reading the open match: a timeout ends when the round is played (freezetime over, a kill, the bomb), even if GRID never writes its end",
+                "BetBoom is opened by you: \"Open BetBoom\" in the list gives a normal BetBoom window; do the check there if it asks, and its live matches join the list",
+                "Hide or show the BetBoom window at any time; open a match in it and the scoreboard follows that match",
+                "The app never reloads BetBoom, never retries and stops if BetBoom refuses the window (403)",
+                "\"Try the full list\": every live esports match on BetBoom, one try; if BetBoom closes it, only the page's matches are read",
+                "BetBoom match: GRID, live log and stream start even when the match page was opened in the BetBoom window, after a check or after a reload by hand",
+                "BetBoom real time: the score now moves with BetBoom's partial updates (it stayed at 0:0 on the match page)",
+                "GRID live score through BetBoom: tries other forms of the address when BetBoom's proxy sends nothing, and says it in the log",
+                "Export (BetBoom match): includes what BetBoom sent for the match, to check the score",
+                "BetBoom match: the live score and the game state other tools read come from BetBoom's own game feed (~8 s), as in the Dibu Scraper; GRID through BetBoom's proxy came about 135 s late",
+                "If the page does not open BetBoom's game feed, Dibu Poly asks for the match on its own socket, as the page does",
+                "BetBoom match, as the Dibu Scraper: the GRID box (score, sides, round clock, who is alive, K/D/A since you opened it) and the live log (rounds, kills, bomb) come from BetBoom's game feed, ~8 s; GRID's widgets through BetBoom only give the veto",
+                "Auto: a Polymarket event without a GRID series (no live data) opens its BetBoom match when BetBoom is connected",
+                "The BetBoom window is a small browser: tabs, back and forward, reload and an address bar (Ctrl+T, Ctrl+W, Ctrl+L, F5, Alt+arrows); links that open a window open a tab",
+                "BetBoom opens only when you click \"Open BetBoom\", in front of you; the match you open in any tab is followed by the scoreboard",
+                "Choose the stream: the one Polymarket names, BetBoom's, or paste a Twitch, Kick or YouTube link for this match (when two matches got the same stream). Kept per match; links used lately are offered again",
+                "The open match's link also hands over Polymarket's winner markets, for tools that compare prices with them"
+              ]
+            },
+            {
+              "v": "0.4.2",
+              "items": [
+                "New HLTV section for CS2, in electric blue: the match's HLTV page inside the scoreboard",
+                "It finds the match in HLTV's list by tournament, team and start time; if it is not sure, the list stays for you to pick",
+                "Find again, the match list and open in your browser, one click each"
+              ]
+            },
+            {
+              "v": "0.4.1",
+              "items": [
+                "New REAL-TIME section: the score with both teams, every map of the series with its result, and a bold BO tag",
+                "The market as a probability bar with the spread, where the price was 5 minutes ago and a 10-minute price line",
+                "Says when Polymarket's own score falls behind the real one",
+                "Dota 2 and LoL: games and kills instead of maps and rounds",
+                "VETO section in rose, so it no longer blends with STREAM"
+              ]
+            },
+            {
+              "v": "0.4.0",
+              "items": [
+                "Its own tool now: it updates from the Library without DibuTinkuy restarting",
+                "An update closes its windows for a moment and brings them back with the same match",
+                "Restart Dibu Poly from the Library, also without restarting DibuTinkuy"
+              ]
+            },
+            {
+              "v": "0.3.1",
+              "items": [
+                "Dota 2: a dead hero greys out, with a rough respawn countdown",
+                "Dota 2: a respawn flashes green, a buyback flashes gold, and BB tags count buybacks",
+                "Dota 2: hero names as players know them (Doom, Timbersaw…) and a HERO column"
+              ]
+            },
+            {
+              "v": "0.3.0",
+              "items": [
+                "Now a tool of the DibuTinkuy launcher: opened from the Library",
+                "Updates are handled by the launcher"
+              ]
+            },
+            {
+              "v": "0.2.0",
+              "items": [
+                "Veto section with map cards and side picks",
+                "Live log with Rounds and Text tabs",
+                "Rows layout, up to three sections per row",
+                "Esports on Polymarket list in the main window"
+              ]
+            }
+          ],
+          "published": "2026-11-20T19:20:01.061Z"
+        }
+      }
+    }
+  },
+  "updated": "2026-11-20T19:44:39.254Z",
+  "retired": [
+    {
+      "file": "packages/dibu-poly-0.4.3-beta.11.dtp",
+      "at": "2026-11-20T19:20:01.061Z"
+    }
+  ]
+}
